@@ -9,6 +9,7 @@
  *
  * @package    contao-community-alliance/usage-statistic-client
  * @author     Tristan Lins <tristan.lins@bit3.de>
+ * @author     Sven Baumann <baumann.sv@gmail.com>
  * @copyright  Contao Community Alliance <https://c-c-a.org>
  * @link       https://github.com/contao-community-alliance/usage-statistic-client
  * @license    http://opensource.org/licenses/LGPL-3.0 LGPL-3.0+
@@ -20,13 +21,14 @@ namespace ContaoCommunityAlliance\UsageStatistic\Client\Test;
 use ContaoCommunityAlliance\Contao\Events\Cron\CronEvents;
 use ContaoCommunityAlliance\UsageStatistic\Client\Collector;
 use Guzzle\Http\Client;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-class CollectorTest extends \PHPUnit_Framework_TestCase
+class CollectorTest extends TestCase
 {
     /**
-     * @covers ContaoCommunityAlliance\UsageStatistic\Client\Collector::checkInstallation
+     * @covers \ContaoCommunityAlliance\UsageStatistic\Client\Collector::checkInstallation
      */
     public function testCheckInstallation()
     {
@@ -43,7 +45,7 @@ class CollectorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ContaoCommunityAlliance\UsageStatistic\Client\Collector::checkServerAddress
+     * @covers \ContaoCommunityAlliance\UsageStatistic\Client\Collector::checkServerAddress
      */
     public function testCheckServerAddress()
     {
@@ -62,10 +64,10 @@ class CollectorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ContaoCommunityAlliance\UsageStatistic\Client\Collector::getInstallationId
+     * @covers \ContaoCommunityAlliance\UsageStatistic\Client\Collector::getInstallationId
      */
     public function testGetInstallationId()
     {
-
+        $this->markTestIncomplete('This test must defined');
     }
 }
